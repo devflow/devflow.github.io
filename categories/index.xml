@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on devflow</title>
-    <link>/categories/</link>
+    <link>https://devflow.github.io/categories/</link>
     <description>Recent content in Categories on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 02 Apr 2020 22:00:35 +0900</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://devflow.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>헛소리</title>
-      <link>/categories/%ED%97%9B%EC%86%8C%EB%A6%AC/</link>
+      <link>https://devflow.github.io/categories/%ED%97%9B%EC%86%8C%EB%A6%AC/</link>
       <pubDate>Thu, 02 Apr 2020 22:00:35 +0900</pubDate>
       
-      <guid>/categories/%ED%97%9B%EC%86%8C%EB%A6%AC/</guid>
+      <guid>https://devflow.github.io/categories/%ED%97%9B%EC%86%8C%EB%A6%AC/</guid>
       <description></description>
     </item>
     
