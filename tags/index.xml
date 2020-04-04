@@ -5,10 +5,55 @@
     <link>https://devflow.github.io/tags/</link>
     <description>Recent content in Tags on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Apr 2020 13:45:07 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 15:00:07 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android</title>
+      <link>https://devflow.github.io/tags/android/</link>
+      <pubDate>Sat, 04 Apr 2020 15:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ObjectDetection</title>
+      <link>https://devflow.github.io/tags/objectdetection/</link>
+      <pubDate>Sat, 04 Apr 2020 15:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/objectdetection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenCV</title>
+      <link>https://devflow.github.io/tags/opencv/</link>
+      <pubDate>Sat, 04 Apr 2020 15:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/opencv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ImageReader</title>
+      <link>https://devflow.github.io/tags/imagereader/</link>
+      <pubDate>Sat, 04 Apr 2020 14:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/imagereader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MediaProjection</title>
+      <link>https://devflow.github.io/tags/mediaprojection/</link>
+      <pubDate>Sat, 04 Apr 2020 14:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/mediaprojection/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bootloader</title>
@@ -43,15 +88,6 @@
       <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
       
       <guid>https://devflow.github.io/tags/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>https://devflow.github.io/tags/android/</link>
-      <pubDate>Fri, 03 Apr 2020 22:00:35 +0900</pubDate>
-      
-      <guid>https://devflow.github.io/tags/android/</guid>
       <description></description>
     </item>
     

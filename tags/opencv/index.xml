@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenCV on devflow</title>
+    <link>https://devflow.github.io/tags/opencv/</link>
+    <description>Recent content in OpenCV on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Apr 2020 15:00:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>OpenCV를 이용해서 UI 오브젝트 검출</title>
+      <link>https://devflow.github.io/posts/5/</link>
+      <pubDate>Sat, 04 Apr 2020 15:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/5/</guid>
+      <description>개발 환경은 아래와 같다.
+ OpenCV 4.2 (Built for Android with NONFREE) Android 10  내가 검출하고자 하는 데이터는 실제(Real Object)가 아니고 안드로이드의 Display에서 특정 UI 컴포넌트를 검출하는 작업이 필요했다.
+먼저 시도한 방법은 OpenCV의 TemplateMatching.
+하지만 여러 디바이스 환경에서의 UI 컴포넌트의 사이즈와 변형(반응형 디자인)으로 인해 TemplateMatching의 특성상 검출하려는 오브젝트의 크기가 검출 대상 소스에서의 크기는 같아야 하고 Multi-scaling의 방식이나 MatPyramid 등 다양한 scale-case 를 반영해도 변형된 데이터에서는 검출이 힘들었다.
+그래서 시도해본 것은 SURF, SIFT 그리고 ORB.</description>
+    </item>
+    
+  </channel>
+</rss>

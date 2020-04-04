@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ImageReader on devflow</title>
+    <link>https://devflow.github.io/tags/imagereader/</link>
+    <description>Recent content in ImageReader on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Apr 2020 14:00:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/imagereader/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>안드로이드 MediaProjection 을 통해서 ImageReader로 버퍼 읽을시 검은 화면</title>
+      <link>https://devflow.github.io/posts/4/</link>
+      <pubDate>Sat, 04 Apr 2020 14:00:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/4/</guid>
+      <description>우선 5.0(API 21) 이상에서는 대부분~ 잘되는데 특정 환경(대부분 예뮬레이터들)에서 MediaProjection을 ImageReader로 통해서 Surface를 읽으면 아무 데이터가 없거나 NULL일 수 있다.
+이는 네이티브, 예뮬 등 일부 환경에서 (물론 5.0도 이상일 수 있다!) openGLES 호환(EGL_RECORDABLE_ANDROID 값이 없는 등.. )이 좋지 않아서 발생하는 문제이다.
+결론은 대상 문제가 발생하는 기기에서는 별도의 방법으로 처리해야 한다는 것&amp;hellip; 일단 구글의 비공식 테스트 앱 (grafika)를 살펴보고 구현하면 된다.
+우선 grafika의 gles를 모드 임포트 해준다.
+ VirtualDisplay가 사용할 수 있는 Surface를 만들어 준다.</description>
+    </item>
+    
+  </channel>
+</rss>

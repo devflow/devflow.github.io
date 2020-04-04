@@ -1,0 +1,212 @@
+<!DOCTYPE html><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="devflow">
+<meta name="description"
+    content="우선 5.0(API 21) 이상에서는 대부분~ 잘되는데 특정 환경(대부분 예뮬레이터들)에서 MediaProjection을 ImageReader로 통해서 Surface를 읽으면 아무 데이터가 없거나 NULL일 수 있다.
+이는 네이티브, 예뮬 등 일부 환경에서 (물론 5.0도 이상일 수 있다!) openGLES 호환(EGL_RECORDABLE_ANDROID 값이 없는 등.. )이 좋지 않아서 발생하는 문제이다.
+결론은 대상 문제가 발생하는 기기에서는 별도의 방법으로 처리해야 한다는 것&amp;hellip; 일단 구글의 비공식 테스트 앱 (grafika)를 살펴보고 구현하면 된다.
+우선 grafika의 gles를 모드 임포트 해준다.
+ VirtualDisplay가 사용할 수 있는 Surface를 만들어 준다." />
+<meta name="keywords"
+    content=", Android, MediaProjection, ImageReader" />
+<meta name="robots" content="noodp" />
+
+<meta property="og:description"
+    content="우선 5.0(API 21) 이상에서는 대부분~ 잘되는데 특정 환경(대부분 예뮬레이터들)에서 MediaProjection을 ImageReader로 통해서 Surface를 읽으면 아무 데이터가 없거나 NULL일 수 있다.
+이는 네이티브, 예뮬 등 일부 환경에서 (물론 5.0도 이상일 수 있다!) openGLES 호환(EGL_RECORDABLE_ANDROID 값이 없는 등.. )이 좋지 않아서 발생하는 문제이다.
+결론은 대상 문제가 발생하는 기기에서는 별도의 방법으로 처리해야 한다는 것&amp;hellip; 일단 구글의 비공식 테스트 앱 (grafika)를 살펴보고 구현하면 된다.
+우선 grafika의 gles를 모드 임포트 해준다.
+ VirtualDisplay가 사용할 수 있는 Surface를 만들어 준다." />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="devflow" />
+<meta property='og:type' content='article'>
+    <meta property="article:tag" content="Android" />
+
+    <meta property="article:tag" content="MediaProjection" />
+
+    <meta property="article:tag" content="ImageReader" />
+<meta property='article:published_time' content='2020-04-04T14:00:07&#43;09:00'/><meta property='article:modified_time' content='2020-04-04T14:00:07&#43;09:00'/><link rel="canonical" href="https://devflow.github.io/posts/4/" />
+
+
+<meta property='og:title' content='안드로이드 MediaProjection 을 통해서 ImageReader로 버퍼 읽을시 검은 화면 :: devflow '>
+<title>
+    
+    안드로이드 MediaProjection 을 통해서 ImageReader로 버퍼 읽을시 검은 화면 :: devflow 
+    
+</title>
+
+
+
+
+<link rel="stylesheet" href="/style.min.4452cd4cfde05b1a4e1dcdb3f88ec20ba94d8f1fa5e92c47ab3459baea66db09.css"><html>
+    <body>
+        <div class="body"><nav class="nav-bar">
+    <div class="container">
+        <a class="logo" href="/">
+            <span class="l">&lt;</span><span class="t">devflow</span><span class="g"> /&gt;</span>
+        </a>
+        <ul class="menu float-right">
+            <li><a href="/"><span class="l">{ </span><span class="t"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></span><span class="t s-lg">about</span><span class="g"> }</span></a></li>
+            <li><a href="/projects"><span class="l">{ </span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg></span><span class="t s-lg">projects</span><span class="t"></span><span class="g">
+                        }</span></a></li>
+            <li><a href="/posts"><span class="l">{ </span><span class="t"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg></span><span class="t s-lg">posts</span><span class="g"> }</span></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="post">
+        <article>
+            <p class="post-tags"><span class="tag"><a href="https://devflow.github.io/tags/android">Android</a></span><span class="tag"><a href="https://devflow.github.io/tags/mediaprojection">MediaProjection</a></span><span class="tag"><a href="https://devflow.github.io/tags/imagereader">ImageReader</a></span>
+            </p>
+
+            <div class="post-info">
+                <p>2020-04-04 14:00&#43;0900</p>
+            </div>
+
+            <h1 class="post-title">
+                <a href="https://devflow.github.io/posts/4/">안드로이드 MediaProjection 을 통해서 ImageReader로 버퍼 읽을시 검은 화면</a>
+            </h1>
+
+
+            <div class="post-content">
+                <p>우선 5.0(API 21) 이상에서는 대부분~ 잘되는데 특정 환경(대부분 예뮬레이터들)에서 <code>MediaProjection</code>을 <code>ImageReader</code>로 통해서 <code>Surface</code>를 읽으면 아무 데이터가 없거나 NULL일 수 있다.</p>
+<p>이는 네이티브, 예뮬 등 일부 환경에서 (물론 5.0도 이상일 수 있다!) openGLES 호환(<code>EGL_RECORDABLE_ANDROID</code> 값이 없는 등.. )이 좋지 않아서 발생하는 문제이다.</p>
+<p>결론은 대상 문제가 발생하는 기기에서는 별도의 방법으로 처리해야 한다는 것&hellip; 일단 구글의 비공식 테스트 앱 (<a href="https://github.com/google/grafika">grafika</a>)를 살펴보고 구현하면 된다.</p>
+<p>우선 grafika의 <code>gles</code>를 모드 임포트 해준다.</p>
+<ol>
+<li><code>VirtualDisplay</code>가 사용할 수 있는 <code>Surface</code>를 만들어 준다.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">eglCore = EglCore(<span style="color:#66d9ef">null</span>, EglCore.FLAG_TRY_GLES3)
+eglConsumerSide = OffscreenSurface(eglCore, displayWidth, displayHeight)
+eglConsumerSide<span style="color:#f92672">!!</span>.makeCurrent()
+
+eglShader = Texture2dProgram(Texture2dProgram.ProgramType.TEXTURE_EXT)
+eglScreen = FullFrameRect(eglShader)
+
+eglTextureId = eglScreen<span style="color:#f92672">!!</span>.createTextureObject()
+eglTexture = SurfaceTexture(eglTextureId, <span style="color:#66d9ef">false</span>)
+eglTexture<span style="color:#f92672">!!</span>.setDefaultBufferSize(displayWidth, displayHeight)
+
+eglProducerSide = Surface(eglTexture)
+
+eglTexture<span style="color:#f92672">!!</span>.setOnFrameAvailableListener(eglCallback)
+
+eglBuffer = ByteBuffer.allocate(displayHeight * displayWidth * <span style="color:#ae81ff">4</span>)
+eglBuffer<span style="color:#f92672">!!</span>.order(ByteOrder.nativeOrder())
+
+eglCurrentBitmap = Bitmap.createBitmap(displayWidth, displayHeight, Bitmap.Config.ARGB_8888)
+
+virtualDisplay = mProjection<span style="color:#f92672">!!</span>.createVirtualDisplay(
+  <span style="color:#e6db74">&#34;ScreenCapture&#34;</span>,
+  displayWidth, displayHeight, screenDensity,
+  DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
+  eglProducerSide, <span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">null</span>
+)
+</code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<ol start="2">
+<li>SurfaceTexture의 <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.OnFrameAvailableListener">OnFrameAvailableListener</a></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">eglFrameRate++
+
+eglConsumerSide<span style="color:#f92672">?.</span>makeCurrent()
+eglTexture<span style="color:#f92672">?.</span>updateTexImage()
+
+<span style="color:#66d9ef">if</span> (eglFrameRate &lt; <span style="color:#ae81ff">10</span>) {
+	<span style="color:#66d9ef">return</span>@OnFrameAvailableListener
+}
+
+eglTexture<span style="color:#f92672">?.</span>getTransformMatrix(eglMatrix)
+
+eglConsumerSide<span style="color:#f92672">?.</span>makeCurrent()
+eglScreen<span style="color:#f92672">?.</span>drawFrame(eglTextureId, eglMatrix)
+eglConsumerSide<span style="color:#f92672">?.</span>swapBuffers()
+
+eglBuffer<span style="color:#f92672">?.</span>rewind()
+GLES20.glReadPixels(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, displayWidth, displayHeight,
+GLES10.GL_RGBA, GLES20.GL_UNSIGNED_BYTE, eglBuffer)
+eglBuffer<span style="color:#f92672">?.</span>rewind()
+
+eglFrameRate = <span style="color:#ae81ff">0</span>
+
+eglCurrentBitmap<span style="color:#f92672">?.</span>copyPixelsFromBuffer(eglBuffer)
+</code></pre></div><p>내 경우에는 퍼포먼스 향상을 위해 프레임이 10번 이상 변경될 때만 로직을 처리하도록 OnFrameAvailableListener에 elgFrameRate라는 변수를 추가했다. 이 부분은 알아서 판단하기 바람ㅎ</p>
+<p>추가로 결과물의 Y축이 뒤집어져서(상하 반전) 출력될 수 있는데 <code>Texture2dProgram</code> 클래스의 <code>VERTEX_SHADER</code>를 아래 값으로 수정한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">= <span style="color:#e6db74">&#34;uniform mat4 uMVPMatrix;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;uniform mat4 uTexMatrix;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;attribute vec4 aPosition;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;attribute vec4 aTextureCoord;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;varying vec2 vTextureCoord;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;void main() {\n&#34;</span> +
+    <span style="color:#e6db74">&#34;    gl_Position = uMVPMatrix * aPosition;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;    vec2 coordInterm = (uTexMatrix * aTextureCoord).xy;\n&#34;</span> +
+    <span style="color:#e6db74">&#34;    vTextureCoord = vec2(coordInterm.x, 1.0 - coordInterm.y);\n&#34;</span> +
+    <span style="color:#e6db74">&#34;}\n&#34;</span>;
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p>테스트 결과 Bitmap을 정상적으로 가져올 수 있었다.</p>
+<p>다만 퍼포먼스 문제로 인해(프레임 변화 시 5~10%의 CPU 사용) 별도의 루틴을 마련해서 기존 <code>ImageReader</code>가 작동하지 않는 상황에서만 불가피하게 사용할 수 있도록 한다.</p>
+<p>추가로, 각 Surface 등 Release가 가능한 것들은 Lifecycle에 맞춰 적절히 Release를 해주도록 한다.</p>
+
+            </div>
+
+        </article>
+        <div id="comments" class="comments">
+            
+            <script type="text/javascript">
+                var disqus_identifier = "\/posts\/4\/"
+            </script>
+            
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bdevflow" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <section class="container">
+        <p>blog/devflow</p>
+    </section>
+
+</footer>
+
+
+<script data-ad-client="ca-pub-8789708352088811" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></div>
+        
+        
+        <script type="text/javascript" src="/bundle.min.3d2cce203713785cf23c6b348fc5bb23bc90be30cb2177ff32e14835a3771864d3ba9a716bf53f6771ff1201a1579d6c4ddd45ef21c6fc4ce9519ceaa5ff00ee.js" integrity="sha512-PSzOIDcTeFzyPGs0j8W7I7yQvjDLIXf/MuFINaN3GGTTuppxa/U/Z3H/EgGhV51sTd1F7yHG/EzpUZzqpf8A7g=="></script>
+    </body>
+</html>
