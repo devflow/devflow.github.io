@@ -5,10 +5,46 @@
     <link>https://devflow.github.io/tags/</link>
     <description>Recent content in Tags on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 03 Apr 2020 22:00:35 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 13:45:07 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bootloader</title>
+      <link>https://devflow.github.io/tags/bootloader/</link>
+      <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/bootloader/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://devflow.github.io/tags/linux/</link>
+      <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UEFI</title>
+      <link>https://devflow.github.io/tags/uefi/</link>
+      <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/uefi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://devflow.github.io/tags/windows/</link>
+      <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>

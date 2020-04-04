@@ -2,15 +2,15 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="devflow">
-<meta name="description" content="hello world;" />
-<meta name="keywords" content="" />
+<meta name="description" content="문제 환경  윈도우(Windows 10)가 sdb 에 설치됨. 리눅스(Arch Linux, GRUB)를 sda에 설치 후, 리눅스에서 os-prober가 Windows의 진입점을 찾지 못함.  준비물  부팅가능한 Windows 설치 미디어 (USB, DVD&amp;hellip;)[1]  해결  Windows 설치 미디어로 부팅한다. 문제해결 -&amp;gt; 고급 -&amp;gt; 명령 프롬프트 diskpart list disk 입력 후 윈도우가 설치된 디스크X를 찾는다. sel disk X list vol 입력 후 EFI 파티션Y을 찾아보자. 파티션은 파일시스템 FAT32을 가지며 용량은 ~512MB 정도함. sel vol Y assign letter=T: EFI 파티션을 T:에 할당하자." />
+<meta name="keywords" content=", Linux, Windows, UEFI, Bootloader" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://devflow.github.io/projects/frost-nova/" />
+<link rel="canonical" href="https://devflow.github.io/posts/3/" />
 
 
     <title>
         
-            frost-nova :: devflow 
+            리눅스 설치 후 윈도우 UEFI 복구 :: devflow 
         
     </title>
 
@@ -52,13 +52,55 @@
 <div class="container">
     <div class="post">
         <article>
+            <p class="post-tags"><span class="tag"><a href="https://devflow.github.io/tags/linux">Linux</a></span><span class="tag"><a href="https://devflow.github.io/tags/windows">Windows</a></span><span class="tag"><a href="https://devflow.github.io/tags/uefi">UEFI</a></span><span class="tag"><a href="https://devflow.github.io/tags/bootloader">Bootloader</a></span>
+            </p>
+
+            <div class="post-info">
+                <p>2020-04-04 13:45&#43;0900</p>
+            </div>
+
             <h1 class="post-title">
-                <a href="https://devflow.github.io/projects/frost-nova/">frost-nova</a>
+                <a href="https://devflow.github.io/posts/3/">리눅스 설치 후 윈도우 UEFI 복구</a>
             </h1>
 
 
             <div class="post-content">
-                <p>hello world;</p>
+                <p><img src="/posts/3/3.png" alt="CMD"></p>
+<h3 id="문제-환경">문제 환경</h3>
+<ol>
+<li>윈도우(Windows 10)가 <code>sdb</code> 에 설치됨.</li>
+<li>리눅스(Arch Linux, GRUB)를 <code>sda</code>에 설치 후, 리눅스에서 <code>os-prober</code>가 <code>Windows</code>의 진입점을 찾지 못함.</li>
+</ol>
+<h3 id="준비물">준비물</h3>
+<ul>
+<li>부팅가능한 Windows 설치 미디어 (USB, DVD&hellip;)<a href="https://www.microsoft.com/ko-kr/software-download/windows10%5C">[1]</a></li>
+</ul>
+<h3 id="해결">해결</h3>
+<ol>
+<li>Windows 설치 미디어로 부팅한다.</li>
+<li>문제해결 -&gt; 고급 -&gt; 명령 프롬프트</li>
+<li><code>diskpart</code></li>
+<li><code>list disk</code> 입력 후 윈도우가 설치된 디스크<code>X</code>를 찾는다.</li>
+<li><code>sel disk X</code></li>
+<li><code>list vol</code> 입력 후 EFI 파티션<code>Y</code>을 찾아보자. 파티션은 파일시스템 <code>FAT32</code>을 가지며 용량은 <code>~512MB</code> 정도함.</li>
+<li><code>sel vol Y</code></li>
+<li><code>assign letter=T:</code> EFI 파티션을 <code>T:</code>에 할당하자. (필요시 다른 곳에 할당해줘도 됨)</li>
+<li><code>exit</code>로 diskpart를 종료.</li>
+<li><code>cd /d T:\EFI\Microsoft\Boot\</code>, 부트로더 경로 이동.
+<ul>
+<li>위 경로가 존재하지 않는다면 아래를 참고하자</li>
+<li><code>T:\Boot\</code> or <code>T:\ESD\Windows\EFI\Microsoft\Boot\</code> 시도.</li>
+<li><code>cd /d T:\EFI</code> 로 이동한 후
+<ul>
+<li>위 경로로도 이동할 수 없다면 파티션 선택이 올바르지 않습니다. 처음부터 다시.</li>
+</ul>
+</li>
+<li><code>mkdir T:\EFI\Microsoft\Boot\</code>, 로 디렉토리를 새로 만들자.</li>
+</ul>
+</li>
+<li><code>bcdboot C:\Windows /s T: /f UEFI</code>, <code>C:\Windows</code>는 윈도우가 설치 된 경로여야 함.</li>
+</ol>
+<p>여기까지 진행했으면 리눅스로 부팅하여, <code>os-prober</code> 실행 후 정상적으로 윈도우를 찾을 수 있는지 확인 후, <code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code> GRUB 설정을 새로 적용해주면 된다.</p>
 
             </div>
 
@@ -66,7 +108,7 @@
         <div id="comments" class="comments">
             
             <script type="text/javascript">
-                var disqus_identifier = "\/projects\/frost-nova\/"
+                var disqus_identifier = "\/posts\/3\/"
             </script>
             
             <div id="disqus_thread"></div>

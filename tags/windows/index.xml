@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on devflow</title>
+    <link>https://devflow.github.io/tags/windows/</link>
+    <description>Recent content in Windows on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Apr 2020 13:45:07 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>리눅스 설치 후 윈도우 UEFI 복구</title>
+      <link>https://devflow.github.io/posts/3/</link>
+      <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/3/</guid>
+      <description>문제 환경  윈도우(Windows 10)가 sdb 에 설치됨. 리눅스(Arch Linux, GRUB)를 sda에 설치 후, 리눅스에서 os-prober가 Windows의 진입점을 찾지 못함.  준비물  부팅가능한 Windows 설치 미디어 (USB, DVD&amp;hellip;)[1]  해결  Windows 설치 미디어로 부팅한다. 문제해결 -&amp;gt; 고급 -&amp;gt; 명령 프롬프트 diskpart list disk 입력 후 윈도우가 설치된 디스크X를 찾는다. sel disk X list vol 입력 후 EFI 파티션Y을 찾아보자. 파티션은 파일시스템 FAT32을 가지며 용량은 ~512MB 정도함. sel vol Y assign letter=T: EFI 파티션을 T:에 할당하자.</description>
+    </item>
+    
+  </channel>
+</rss>
