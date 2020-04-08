@@ -5,10 +5,37 @@
     <link>https://devflow.github.io/tags/</link>
     <description>Recent content in Tags on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Apr 2020 15:00:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 00:03:43 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>i3wm</title>
+      <link>https://devflow.github.io/tags/i3wm/</link>
+      <pubDate>Thu, 09 Apr 2020 00:03:43 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/i3wm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://devflow.github.io/tags/linux/</link>
+      <pubDate>Thu, 09 Apr 2020 00:03:43 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TWM</title>
+      <link>https://devflow.github.io/tags/twm/</link>
+      <pubDate>Thu, 09 Apr 2020 00:03:43 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/twm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>
@@ -61,15 +88,6 @@
       <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
       
       <guid>https://devflow.github.io/tags/bootloader/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://devflow.github.io/tags/linux/</link>
-      <pubDate>Sat, 04 Apr 2020 13:45:07 +0900</pubDate>
-      
-      <guid>https://devflow.github.io/tags/linux/</guid>
       <description></description>
     </item>
     

@@ -5,10 +5,21 @@
     <link>https://devflow.github.io/posts/</link>
     <description>Recent content in Posts on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Apr 2020 15:00:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 00:03:43 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>i3wm를 알아보자</title>
+      <link>https://devflow.github.io/posts/6/</link>
+      <pubDate>Thu, 09 Apr 2020 00:03:43 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/6/</guid>
+      <description>i3에 대해서 기존 DE(Desktop Environment) 사용자의 시선에서 알아보도록하자.  i3? i3은 GNU/Linux, BSD 운영체제를 위한 Tiling window manager 중 하나임.
+Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Windows)의 타일링 시스템이 있다. 시작+방향키 단축키나, 창을 한쪽으로 드래그해서 각 윈도우(창)들을 겹치지 않게 정렬을 해본 기억이 있을 것이다. 이러한 메커니즘으로 창들을 정렬할 수 있게 하는 프로그램.
+ X11의 twm(Tab window manager)와는 다르다.  왜 i3 인가? i3는 TWM중에서 사용이 제일 쉽다고 느끼고 무엇보다도 문서화가 아주 잘 되어 있고 사용자들도 많으므로 사용중 문제가 생겼거나, 궁금한 점은 다양한 커뮤니티를 통해 순식간에 해결할 수 있다는 점.</description>
+    </item>
     
     <item>
       <title>OpenCV를 이용해서 UI 오브젝트 검출</title>
