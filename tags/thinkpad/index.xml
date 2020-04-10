@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thinkpad on devflow</title>
+    <link>https://devflow.github.io/tags/thinkpad/</link>
+    <description>Recent content in Thinkpad on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 10 Apr 2020 15:59:39 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/thinkpad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thinkapd E495 백라이트 키보드로 교체하기</title>
+      <link>https://devflow.github.io/posts/7/</link>
+      <pubDate>Fri, 10 Apr 2020 15:59:39 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/7/</guid>
+      <description>TL;DR; 백라이트 안돼요, 안돼&amp;hellip; 왜? 이런짓을? 개인적으로 데스크탑이 잠시 없는터라 노트북이 필요했고 대충 검색좀 해보니까, 저렴하고 나에게 맞는 씽크패드 E495를 구입해서 쓰고있는데, 그렇게 자주는 아니지만 가끔 어두운 환경에서 사용할 때 백라이트가 너무나 필요했다.
+바꾸면 되긴할까? AMD Ryzen SoC을 가지는 씽크패드 E 라인들은 어째 죄다 백라이트가 없다. 인텔은 되는데&amp;hellip; 이때 눈치 챘다. 여러 커뮤니티를 돌아다녀보니 백라이트 키보드를 바꿔도 되지 않는다! 라는 글들이 많이 보였다. 아무튼 안된단 소리.
+그래도&amp;hellip; 주문했다. 약 8일만에 도착.</description>
+    </item>
+    
+  </channel>
+</rss>
