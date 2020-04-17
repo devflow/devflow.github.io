@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on devflow</title>
+    <link>https://devflow.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Apr 2020 22:26:30 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pop!_OS 19.10 AMD/INTEL Mirror 다운로드</title>
+      <link>https://devflow.github.io/posts/8/</link>
+      <pubDate>Fri, 17 Apr 2020 22:26:30 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/8/</guid>
+      <description>다운로드를 제공하는 서버가 단 하나 밖에 없는데, 그것마저 한국에선 속도가 매우 느리기 때문에 시간을 들여 다운받은 것을 구글 드라이브를 통해 공유한다.
+system76에서 Pop!_OS 20.xx이 최근 베타로 릴리즈 되었던데, GNOME + TWM 라서 매우 기대중이다.
+Pop!_OS 홈페이지 / Github
+파일 체크섬
+ MD5 160e3ab12bd93deec7e5786bf2f90aea SHA1 bdb2402bc5c795142c420db32ee0c8914e3cf42e SHA256 bf43424db9bfc5d2c28b7c61326716001d1780053d95a0c122a514b49a198544  구글 드라이브
+pop-os_19.10_amd64_intel_15.iso (2.1 GB)</description>
+    </item>
+    
+  </channel>
+</rss>

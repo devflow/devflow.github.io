@@ -5,10 +5,28 @@
     <link>https://devflow.github.io/tags/</link>
     <description>Recent content in Tags on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Apr 2020 15:59:39 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 22:26:30 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pop_os</title>
+      <link>https://devflow.github.io/tags/pop_os/</link>
+      <pubDate>Fri, 17 Apr 2020 22:26:30 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/pop_os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://devflow.github.io/tags/ubuntu/</link>
+      <pubDate>Fri, 17 Apr 2020 22:26:30 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>E495</title>
@@ -169,6 +187,15 @@
       <pubDate>Thu, 02 Apr 2020 22:00:35 +0900</pubDate>
       
       <guid>https://devflow.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GNU/Linux</title>
+      <link>https://devflow.github.io/tags/gnu/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devflow.github.io/tags/gnu/linux/</guid>
       <description></description>
     </item>
     
