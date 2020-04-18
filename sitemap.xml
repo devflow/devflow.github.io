@@ -3,13 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://devflow.github.io/tags/action/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/tags/automation/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://devflow.github.io/</loc>
-    <lastmod>2020-04-18T13:04:28+09:00</lastmod>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://devflow.github.io/tags/github/</loc>
-    <lastmod>2020-04-18T13:04:28+09:00</lastmod>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/posts/10/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/tags/gits/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/tags/graphql/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/posts/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/tags/probot/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devflow.github.io/tags/</loc>
+    <lastmod>2020-04-18T21:08:14+09:00</lastmod>
   </url>
   
   <url>
@@ -19,16 +59,6 @@
   
   <url>
     <loc>https://devflow.github.io/posts/9/</loc>
-    <lastmod>2020-04-18T13:04:28+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://devflow.github.io/posts/</loc>
-    <lastmod>2020-04-18T13:04:28+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://devflow.github.io/tags/</loc>
     <lastmod>2020-04-18T13:04:28+09:00</lastmod>
   </url>
   

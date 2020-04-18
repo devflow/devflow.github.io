@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github on devflow</title>
-    <link>https://devflow.github.io/tags/github/</link>
-    <description>Recent content in Github on devflow</description>
+    <title>Automation on devflow</title>
+    <link>https://devflow.github.io/tags/automation/</link>
+    <description>Recent content in Automation on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 18 Apr 2020 21:08:14 +0900</lastBuildDate>
     
-	<atom:link href="https://devflow.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://devflow.github.io/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,18 +18,6 @@
       <guid>https://devflow.github.io/posts/10/</guid>
       <description>이 게시물은 &amp;lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Jason Etcovitch&amp;rsquo;을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&amp;hellip; 모호한 내용은 원본 게시물을 참고바람. 😉
  Github Action와 Probot 이 내용은 팁보다는 더 복잡한 이야기 이긴한데 자동화 도구를 사용하보면 분명 마음에 들것이다. Github Actions과 Probot은 별도의 프로젝트로 개발자가 보일러플레이트(인증 및 웹훅 이벤트 핸들링과 같은)를 고려하지않게 추상화를 제공하여 Github에서 기능 확장을 할 수 있도록하는 목표를 가지고 있다. 관심이 생긴다면 Github 엔지니어인 Jason Etcovitch의 블로그를 살펴보자.</description>
-    </item>
-    
-    <item>
-      <title>NPM이 Github에게 인수</title>
-      <link>https://devflow.github.io/posts/9/</link>
-      <pubDate>Sat, 18 Apr 2020 13:04:28 +0900</pubDate>
-      
-      <guid>https://devflow.github.io/posts/9/</guid>
-      <description>결국 NPM이 공식적으로 Github에게 인수되었다. 앞으로 Github에서 유용하게 모듈들을 관리할 수 있으지&amp;hellip; 많은 기대가 된다.
-마이크로소프트가 오픈소스 생태계를 점령하는 행보가 무섭다.
-참고 https://github.blog/2020-04-15-npm-has-joined-github/
-https://blog.npmjs.org/post/612764866888007680/next-phase-montage</description>
     </item>
     
   </channel>
