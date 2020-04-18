@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on devflow</title>
+    <link>https://devflow.github.io/tags/github/</link>
+    <description>Recent content in Github on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 18 Apr 2020 13:04:28 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NPM이 Github에게 인수</title>
+      <link>https://devflow.github.io/posts/9/</link>
+      <pubDate>Sat, 18 Apr 2020 13:04:28 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/9/</guid>
+      <description>결국 NPM이 공식적으로 Github에게 인수되었다. 앞으로 Github에서 유용하게 모듈들을 관리할 수 있으지&amp;hellip; 많은 기대가 된다.
+마이크로소프트가 오픈소스 생태계를 점령하는 행보가 무섭다.
+참고 https://github.blog/2020-04-15-npm-has-joined-github/
+https://blog.npmjs.org/post/612764866888007680/next-phase-montage</description>
+    </item>
+    
+  </channel>
+</rss>

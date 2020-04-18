@@ -5,10 +5,28 @@
     <link>https://devflow.github.io/tags/</link>
     <description>Recent content in Tags on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 17 Apr 2020 22:26:30 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2020 13:04:28 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Github</title>
+      <link>https://devflow.github.io/tags/github/</link>
+      <pubDate>Sat, 18 Apr 2020 13:04:28 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>https://devflow.github.io/tags/npm/</link>
+      <pubDate>Sat, 18 Apr 2020 13:04:28 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/npm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>pop_os</title>
