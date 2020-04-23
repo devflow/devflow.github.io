@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Metrics on devflow</title>
+    <link>https://devflow.github.io/tags/metrics/</link>
+    <description>Recent content in Metrics on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Apr 2020 19:40:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/metrics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Github 프로팁 #2</title>
+      <link>https://devflow.github.io/posts/12/</link>
+      <pubDate>Thu, 23 Apr 2020 19:40:23 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/12/</guid>
+      <description>이 게시물은 &amp;lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly&amp;rsquo;을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&amp;hellip; 모호한 내용은 원본 게시물을 참고바람. 😉
+ 1. Fuzzy file finder 어느 저장소에서든 파일을 검색하기 원한다면 t 키를 누른 후 타이핑하면 된다.
+2. 편하게 파일과 디렉토리 탐색하기 Octotree는 트리형태로 손쉽게 파일과 디렉토리를 탐색할 수 있는 브라우저 확장프로그램이다.
+보너스 포인트: Github Enterprise에서도 작동한다.
+재밌는 사실: 몇 년 전 Github Enterprise를 지원하려는 개발자에게 연락했는데, 만약 당신이 Github를 위한 브라우저 확장프로그램을 구축하고 있고 Github Enterprise도 지원 할 예정이라면, Github Developer Program에 참가해서 개발자 라이센스를 받을 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

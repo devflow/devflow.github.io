@@ -5,10 +5,55 @@
     <link>https://devflow.github.io/tags/</link>
     <description>Recent content in Tags on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Apr 2020 21:08:14 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 19:40:23 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DarkTheme</title>
+      <link>https://devflow.github.io/tags/darktheme/</link>
+      <pubDate>Thu, 23 Apr 2020 19:40:23 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/darktheme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://devflow.github.io/tags/github/</link>
+      <pubDate>Thu, 23 Apr 2020 19:40:23 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://devflow.github.io/tags/markdown/</link>
+      <pubDate>Thu, 23 Apr 2020 19:40:23 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metrics</title>
+      <link>https://devflow.github.io/tags/metrics/</link>
+      <pubDate>Thu, 23 Apr 2020 19:40:23 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/metrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Protip</title>
+      <link>https://devflow.github.io/tags/protip/</link>
+      <pubDate>Thu, 23 Apr 2020 19:40:23 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/tags/protip/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Action</title>
@@ -25,15 +70,6 @@
       <pubDate>Sat, 18 Apr 2020 21:08:14 +0900</pubDate>
       
       <guid>https://devflow.github.io/tags/automation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>https://devflow.github.io/tags/github/</link>
-      <pubDate>Sat, 18 Apr 2020 21:08:14 +0900</pubDate>
-      
-      <guid>https://devflow.github.io/tags/github/</guid>
       <description></description>
     </item>
     

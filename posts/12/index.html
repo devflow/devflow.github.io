@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-163123367-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-163123367-1');
+</script>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="0Oj_r3YTNfWTf3gntxXy8AB42qW-fszX8gOZ8m_HaOk" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="devflow">
+<meta name="description"
+    content="이 게시물은 &amp;lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly&amp;rsquo;을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&amp;hellip; 모호한 내용은 원본 게시물을 참고바람. 😉
+ 1. Fuzzy file finder 어느 저장소에서든 파일을 검색하기 원한다면 t 키를 누른 후 타이핑하면 된다.
+2. 편하게 파일과 디렉토리 탐색하기 Octotree는 트리형태로 손쉽게 파일과 디렉토리를 탐색할 수 있는 브라우저 확장프로그램이다.
+보너스 포인트: Github Enterprise에서도 작동한다.
+재밌는 사실: 몇 년 전 Github Enterprise를 지원하려는 개발자에게 연락했는데, 만약 당신이 Github를 위한 브라우저 확장프로그램을 구축하고 있고 Github Enterprise도 지원 할 예정이라면, Github Developer Program에 참가해서 개발자 라이센스를 받을 수 있다." />
+<meta name="keywords"
+    content=", Github, Protip, Markdown, DarkTheme, Metrics" />
+<meta name="robots" content="noodp" />
+
+<meta property="og:description"
+    content="이 게시물은 &amp;lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly&amp;rsquo;을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&amp;hellip; 모호한 내용은 원본 게시물을 참고바람. 😉
+ 1. Fuzzy file finder 어느 저장소에서든 파일을 검색하기 원한다면 t 키를 누른 후 타이핑하면 된다.
+2. 편하게 파일과 디렉토리 탐색하기 Octotree는 트리형태로 손쉽게 파일과 디렉토리를 탐색할 수 있는 브라우저 확장프로그램이다.
+보너스 포인트: Github Enterprise에서도 작동한다.
+재밌는 사실: 몇 년 전 Github Enterprise를 지원하려는 개발자에게 연락했는데, 만약 당신이 Github를 위한 브라우저 확장프로그램을 구축하고 있고 Github Enterprise도 지원 할 예정이라면, Github Developer Program에 참가해서 개발자 라이센스를 받을 수 있다." />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="devflow" />
+<meta property='og:type' content='article'>
+    <meta property="article:tag" content="Github" />
+
+    <meta property="article:tag" content="Protip" />
+
+    <meta property="article:tag" content="Markdown" />
+
+    <meta property="article:tag" content="DarkTheme" />
+
+    <meta property="article:tag" content="Metrics" />
+<meta property='article:published_time' content='2020-04-23T19:40:23&#43;09:00'/><meta property='article:modified_time' content='2020-04-23T19:40:23&#43;09:00'/><link rel="canonical" href="https://devflow.github.io/posts/12/" />
+
+
+<meta property='og:title' content='Github 프로팁 #2 :: devflow '>
+<title>
+    
+    Github 프로팁 #2 :: devflow 
+    
+</title>
+
+
+
+
+<link rel="stylesheet" href="/style.min.7f142184667242ee2c9eb807d76515fdfaad1c71c28739c6c54d0f1ae6874a7c.css"></head>
+    <body>
+        <div class="body"><nav class="nav-bar">
+    <div class="container">
+        <a class="logo" href="/">
+            <span class="l">&lt;</span><span class="t">devflow</span><span class="g"> /&gt;</span>
+        </a>
+        <ul class="menu float-right">
+            <li><a href="/"><span class="l">{ </span><span class="t"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></span><span class="t s-lg">about</span><span class="g"> }</span></a></li>
+            <li><a href="/projects"><span class="l">{ </span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg></span><span class="t s-lg">projects</span><span class="t"></span><span class="g">
+                        }</span></a></li>
+            <li><a href="/posts"><span class="l">{ </span><span class="t"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg></span><span class="t s-lg">posts</span><span class="g"> }</span></a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="post">
+        <article>
+            <p class="post-tags"><span class="tag"><a href="https://devflow.github.io/tags/github">Github</a></span><span class="tag"><a href="https://devflow.github.io/tags/protip">Protip</a></span><span class="tag"><a href="https://devflow.github.io/tags/markdown">Markdown</a></span><span class="tag"><a href="https://devflow.github.io/tags/darktheme">DarkTheme</a></span><span class="tag"><a href="https://devflow.github.io/tags/metrics">Metrics</a></span>
+            </p>
+
+            <div class="post-info">
+                <p>2020-04-23 19:40&#43;0900</p>
+            </div>
+
+            <h1 class="post-title">
+                <a href="https://devflow.github.io/posts/12/">Github 프로팁 #2</a>
+            </h1>
+
+
+            <div class="post-content">
+                <p><em>이 게시물은 <a href="https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/">&lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly&rsquo;</a>을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&hellip; 모호한 내용은 원본 게시물을 참고바람.</em> 😉</p>
+<hr>
+<h2 id="1-fuzzy-file-finder">1. Fuzzy file finder</h2>
+<p>어느 저장소에서든 파일을 검색하기 원한다면 <code>t</code> 키를 누른 후 타이핑하면 된다.</p>
+<p><img src="/posts/12/001.gif" alt="fuzzy file finder wp"></p>
+<h2 id="2-편하게-파일과-디렉토리-탐색하기">2. 편하게 파일과 디렉토리 탐색하기</h2>
+<p><a href="https://github.com/ovity/octotree">Octotree</a>는 트리형태로 손쉽게 파일과 디렉토리를 탐색할 수 있는 브라우저 확장프로그램이다.</p>
+<p><img src="/posts/12/002.gif" alt="octotree wp"></p>
+<p><strong>보너스 포인트:</strong> Github Enterprise에서도 작동한다.</p>
+<p><strong>재밌는 사실:</strong> <a href="https://github.com/ovity/octotree/pull/47#issuecomment-43431767">몇 년 전 Github Enterprise를 지원하려는 개발자에게 연락했는데</a>, 만약 당신이 Github를 위한 브라우저 확장프로그램을 구축하고 있고 Github Enterprise도 지원 할 예정이라면, <a href="https://developer.github.com/program/">Github Developer Program</a>에 참가해서 개발자 라이센스를 받을 수 있다.</p>
+<h2 id="3-새로운-알림-받기">3. 새로운 알림 받기</h2>
+<p><a href="https://github.com/sindresorhus/notifier-for-github">notifier-for-github</a>는 브라우저 툴바에 눈에 거슬리지 않는 아이콘으로 몇 개의 Github 알림이 기다리고 있는지 표시해준다. 원한다면 데스크톱 알림도 사용할 수 있다.</p>
+<p><img src="/posts/12/003.png" alt="notifier wp"></p>
+<p>물론 이것도 Github Enterpise를 지원한다. 단지 API endpoint를 인스턴스의 URL(예: <code>https://api.github.cyberdynesystems.com</code>)로 변경하면 된다.</p>
+<h2 id="4-멘션을-강조하기">4. @멘션을 강조하기</h2>
+<p>공들여 설정한 수 많은 이메일과 알림 필터에 상관없이 항상 지나치는 것이 있다. <a href="https://github.com/benbalter/github-mention-highlighter">Mention Highlighter</a>는 모든 내 이름에 대한 언급을 강조해 표시해준다. 많은 텍스트를 빠르게 살펴볼 때에도 날 직접 멘션한 내용에 대해서 바로 확인 할 수 있다.</p>
+<p><img src="/posts/12/004.png" alt="mention wp"></p>
+<h2 id="5-코드-스니펫-링크">5. 코드 스니펫 링크</h2>
+<p>은밀한 비밀은 아니지만 모든 사람들이 잘 알지 못하는 놀라운 기능인데 파일을 볼 때 행 번호(Line number)를 클릭해 그 행 위치로 이동하는 링크를 가져올 수 있다. 기본적으로는 행 번호(예: <code>#L1337</code>)가 URL 뒤에 추가되는데, 그 링크는 항상 해당 행으로 바로 이동한다.</p>
+<p>하지만 해당 파일이 수정, 삭제 혹은 이름이 변경되었으면 그 링크는 더 이상 예상한대로 작동하지 않는다. 항상 작동하는 링크는 해당 행에서 <code>y</code>키를 누르거나 <code>Copy permalink</code>를 클릭해 정규(Canonical) URL을 생성하면 된다.</p>
+<p><img src="/posts/12/005.png" alt="link wp"></p>
+<p><code>Shift</code> 키를 누른 상태에서 시작행과 종료행을 선택해서 범위 지정도 가능하다.</p>
+<p><strong>추가 보너스:</strong> 코드 스니펫 링크를 Github 코멘트에 추가한다면 코드의 멋진 시각화가 나타난다.</p>
+<p><img src="/posts/12/006.png" alt="link2 wp"></p>
+<p>이 기능은 원래 몇 년 전, 몇 명의 인턴에 의해 구축되었다. 만약 당신이 이와 같은 재밌는 것을 개발하기 원하면 <a href="https://internships.github.com/">Github internship program</a>에 지원하는 것을 고려해보자.</p>
+<h2 id="6-꼭-기억해야하는-마크다운-서식-팁">6. 꼭 기억해야하는 마크다운 서식 팁</h2>
+<p><a href="https://github.github.com/gfm/">Github Flavored Markdown</a>은 평범한 텍스트와 기본 표를 위한 아주 좋은 서식인데, 가끔은 자신이 원하는 것을 만들기 위해서는 창의적 이어야 할 때가 있다.</p>
+<h3 id="키보드-태그">키보드 태그</h3>
+<p><code>&lt;kbd&gt;</code>태그를 사용해서 텍스트를 기존 억음 부호(backtick, `) 텍스트와는 다르게 버튼 처럼 만들 수 있다. 이건 보통 문서 같은 것(README, wiki&hellip;)에 들어가는 키보드 단축기나 게임 조작키같은 것에 적당하다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Press &lt;kbd&gt;W&lt;/kbd&gt; to go up, and &lt;kbd&gt;A&lt;/kbd&gt; to go down.
+If you can find the &lt;kbd&gt;ESC&lt;/kbd&gt;, pressing that will fire missiles 🚀
+</code></pre></div><p><img src="/posts/12/007.png" alt="keyboard tags wp"></p>
+<h3 id="hex-코드의-시각화">hex 코드의 시각화</h3>
+<p>hex 컬러를 억음 부호(backtick, `) 안에 넣으면 해당 색으로 타일이 그려진다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">GitHub contribution graph colors: <span style="color:#e6db74">`#C6E48B`</span> <span style="color:#e6db74">`#7AC96F`</span> <span style="color:#e6db74">`#249A3C`</span> <span style="color:#e6db74">`#196127`</span>
+</code></pre></div><p><img src="/posts/12/008.png" alt="hex color wp"></p>
+<h3 id="변경사항diff-시각화">변경사항(diff) 시각화</h3>
+<p>억음 부호(backtick, `)와 <code>diff</code>를 이용해서 변경사항(diff)을 빨강, 초록으로 강조할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#e6db74">```diff
+</span><span style="color:#e6db74"></span>10 PRINT “BASIC IS COOL”
+<span style="color:#f92672">- 20 GOTO 11
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+ 20 GOTO 10
+</span><span style="color:#a6e22e"></span><span style="color:#e6db74">```</span>
+</code></pre></div><p><img src="/posts/12/009.png" alt="df highlight wp"></p>
+<p>사실 원하는 언어를 세개의 억음부호 뒤에 붙이면 해당언어의 <a href="https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting">구문강조(Syntax highlight)</a>에 따라 표시된다.</p>
+<h3 id="details안에-악마가-있다">details안에 악마가 있다.</h3>
+<p>버그 해결을 위해 오류 로그나 verbose 출력과 같은 긴 내용을 이슈에 추가하고자 할 때가 있다. 하지만 내용이 너무 길어 페이지를 세로로 길게 만들어 버리는데 이때 <code>&lt;details&gt;</code>와 <code>&lt;summary&gt;</code> 태그 사용하는 것을 고려해보자.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Having some problems firing up the laser.
+
+&lt;details&gt;
+&lt;summary&gt;Click here to see terminal history + debug info&lt;/summary&gt;
+&lt;pre&gt;
+488 cd /opt/LLL/controller/laser/
+489 vi LLLSDLaserControl.c
+490 make
+491 make install
+492 ./sanity_check
+493 ./configure -o test.cfg
+494 vi test.cfg
+495 vi ~/last_will_and_testament.txt
+496 cat /proc/meminfo
+497 ps -a -x -u
+498 kill -9 2207
+499 kill 2208
+500 ps -a -x -u
+501 touch /opt/LLL/run/ok
+502 LLLSDLaserControl -ok1
+&lt;/pre&gt;
+</code></pre></div><p><img src="/posts/12/010.gif" alt="details and summary wp"></p>
+<h4 id="텍스트와-이미지-가운데-정렬">텍스트와 이미지 가운데 정렬</h4>
+<p>2020년 이지만 아직도 웹 페이지에서 모든 것을 가운대로 하는 것은 순탄치 않다. 하지만 <code>&lt;div align=”center”&gt; [ Your content here ]&lt;/div&gt;</code> 조합은 경이롭게도 작동한다. README에서 로고를 가운데 정렬 할 때 아주 적합하다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://octodex.github.com/images/dunetocat.png&#34; width=&#34;200&#34;&gt;
+&lt;p&gt;This is some centered text.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre></div><p><img src="/posts/12/011.png" alt="center wp"></p>
+<h4 id="더-작은-텍스트">더 작은 텍스트</h4>
+<p>텍스트를 <code>&lt;sup&gt;</code>이나 <code>&lt;sub&gt;</code>으로 감싸면 약간 작아진다. 이미지 아래에 &ldquo;Fig 1: description&quot;같은 것을 추가하거나 표에서 가로로 스크롤이 되지 않도록 텍스트를 작게 만드는 것에 적합하다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">&lt;div align=&#34;center&#34;&gt;
+&lt;img src=&#34;https://octodex.github.com/images/megacat-2.png&#34; width=&#34;200&#34;&gt;&lt;br&gt;
+&lt;sup&gt;&lt;strong&gt;Fig 1:&lt;/strong&gt; Megatocat into action&lt;/sup&gt;
+&lt;/div&gt;
+View more octocats on the [<span style="color:#f92672">Octodex</span>](<span style="color:#a6e22e">https://octodex.github.com/</span>)!
+</code></pre></div><p><img src="/posts/12/012.png" alt="little text wp"></p>
+<p><strong>보너스 마크다운 프로팁:</strong> 내 친구 <a href="https://github.com/bitoiu">@bitoiu</a>가 <a href="https://github.blog/2020-04-02-github-protips-tips-tricks-hacks-and-secrets-from-vitor-monteiro/#magic-markdown-tables-%e2%9c%a8">마크다운 표와 작동하는 멋진 팁들</a>을 <a href="https://github.blog/2020-04-02-github-protips-tips-tricks-hacks-and-secrets-from-vitor-monteiro/">직전 프로팁 포스트</a>에서 소개했으니 꼭 확인해보자!</p>
+<h2 id="7-url-hacking-topics">7. URL-hacking topics</h2>
+<p>나의 최잭감중 하나로, Github에 <a href="https://github.com/topics/game"><code>#game</code></a>으로 태그 된 새로운 프로젝트들을 찾아보고, 그걸 <del>즐기거나</del> 테스트하거나, 그걸 클론하고 <a href="https://twitter.com/ThePracticalDev/status/720257210161311744">&ldquo;뭔가 바꿔보고 뭐가 일어나는지 본다&rdquo;</a>. 이건 커피 브레이크나 지루한 일요일 오후를 보내기 좋은 활동이다.</p>
+<p>Github는 하나의 토픽과 언어로만(예로 <a href="https://github.com/topics/game?l=javascript"><code>#game</code>으로 분류 되고 JavaScript로 작성된 모든 저장소 검색</a>) 필터링 할 수 있도록 UI를 제공한다. 2개의 토픽을 조합해 검색하는 방법은 URL 해킹법 밖에 없다. 간단히 <code>?q=[TOPIC]</code>을 topic URL에 결합해 두가지의 토픽 검색 결과를 확인 할 수 있다. 몇가지의 예로:</p>
+<ul>
+<li><strong><code>#covid-19</code>와 <code>#visualization</code> 가 태그 된 모든 저장소:</strong>
+<a href="https://github.com/topics/covid-19?q=visualization">https://github.com/topics/covid-19?q=visualization</a></li>
+<li><strong><code>#chrome-extension</code>와 <code>#github</code> 가 태그 된 모든 저장소:</strong>
+<a href="https://github.com/topics/chrome-extension?q=github">https://github.com/topics/chrome-extension?q=github</a></li>
+<li><strong><code>#unity</code>와 <code>#shader</code> 가 태그 된 모든 저장소:</strong>
+<a href="https://github.com/topics/unity?q=shader">https://github.com/topics/unity?q=shader</a></li>
+<li><strong><code>#minecraft</code>와 <code>#mod</code> 가 태그 된 모든 저장소:</strong>
+<a href="https://github.com/topics/minecraft?q=mod">https://github.com/topics/minecraft?q=mod</a></li>
+</ul>
+<p><strong>그거 알아요?:</strong> <a href="https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics">토픽을 저장소에 적용</a>하면 다른 사람들이 저장소를 발견하고 기여하게 도와준다. 단순히 project&rsquo;s purpose와 subject 영역에 관련된 토픽 키워드들을 타이핑하고 버튼을 클릭하기만 하는 아주 간단한 절차다.</p>
+<p><img src="/posts/12/013.gif" alt="topic wp"></p>
+<h2 id="8-어두운-테마-dark-theme">8. 어두운 테마 (dark theme)</h2>
+<p><a href="https://github.com/StylishThemes/GitHub-Dark">비공식 Github 어두운 테마</a> 브라우저 확장프로그램에 관심이 생길 것 이다. 이건 Chrome, Firefox, Opera, Safari에서 작동한다. 추가로 드디어 <a href="https://twitter.com/vdepizzol/status/1245090627508768768">그 favicon 이슈</a>를 수정했다.</p>
+<p><img src="/posts/12/014.png" alt="dark mode"></p>
+<p><strong>그거 알아요?:</strong> 대부분의 소프트웨어 엔지니어는 다크 모드를 선호한다. 왜냐하면&hellip; 빛은 더 많은 벌레(bug)를 유인하기 때문&hellip;&hellip;&hellip;</p>
+<h2 id="9-숫자-게임">9. 숫자 게임</h2>
+<p>때때로 이건 저장소의 메타데이터를 분석하거나 지표를 뽑을 때 유용(혹은 재밌거나)하다. 바라건대 그들이 얼마나 많은 커밋을 했는지로 판단하지 말았으면 한다. 어쨌든 <code>it shortlog -sn</code> 명령줄로 커밋 수 순 기여자 목록을 생성할 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git shortlog -sn
+
+<span style="color:#ae81ff">3164</span>  Stanley Goldman
+<span style="color:#ae81ff">1549</span>  Andreia Gaita
+<span style="color:#ae81ff">195</span>  Don Okuda
+<span style="color:#ae81ff">191</span>  Emil <span style="color:#e6db74">&#34;AngryAnt&#34;</span> Johansen
+<span style="color:#ae81ff">15</span>  Meaghan Lewis
+<span style="color:#ae81ff">9</span>  Lee Reilly
+<span style="color:#ae81ff">8</span>  Sarah Guthals
+<span style="color:#ae81ff">7</span>  Sam Christiansen
+<span style="color:#ae81ff">7</span>  Mauro Palumbo
+<span style="color:#ae81ff">6</span>  Marcus Christensen
+</code></pre></div><p><code>git shortlog -sn --no-merges</code>로 병합(merge) 커밋들은 제외 할 수도 있다.</p>
+<p>공개 저장소이면, <a href="https://leereilly.net/github-high-scores/">Github High Scores</a>에서 8-bit, 아케이드 스타일로 저장소의 기여자들 순위를 확인할 수 있다. 장악력을 보여주거나 인쇄하여 사무실 게시판이나 냉장고에 붙이기 적합하다.</p>
+<p><img src="/posts/12/015.png" alt="high score"></p>
+<p>커밋을 집약해 올린 사람은 순위표에서 보다 아래에 위치 하겠지만, 모두가 승자다!</p>
+<p>이건 단순히 커밋 수 기준인데, 기여한 코드의 줄의 수 기준은 어떨까? <del>모든 굿-엔지니어들은 그게 제일 중요한 지표라고 안다.</del> Git 데이터를 분석해주는 CLI 프로젝트들은 많이 있다.</p>
+<p><a href="https://github.com/arzzen/">@arzzen</a>의 <a href="https://github.com/arzzen/git-quick-stats">git-quick-stats</a>는 멋진 저장소 개요를 제공한다. 일별, 시간별, 월별 기여자들을 확인할 수 도 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git-quick-stats
+
+Stanley Goldman &lt;StanleyGoldman@github.com&gt;:
+ insertions:    <span style="color:#ae81ff">1800</span> <span style="color:#f92672">(</span>1%<span style="color:#f92672">)</span>
+ deletions:     <span style="color:#ae81ff">1455</span> <span style="color:#f92672">(</span>1%<span style="color:#f92672">)</span>
+ files:         <span style="color:#ae81ff">221</span> <span style="color:#f92672">(</span>2%<span style="color:#f92672">)</span>
+ commits:       <span style="color:#ae81ff">108</span> <span style="color:#f92672">(</span>3%<span style="color:#f92672">)</span>
+ lines changed: <span style="color:#ae81ff">3255</span>
+ first commit:  Thu Apr <span style="color:#ae81ff">6</span> 09:33:53 <span style="color:#ae81ff">2017</span> -0700
+ last commit:   Fri Jul <span style="color:#ae81ff">27</span> 14:14:51 <span style="color:#ae81ff">2018</span> -0400
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p><a href="https://github.com/casperdcl/git-fame">@casperdcl</a>의 <a href="https://github.com/casperdcl/git-fame">git-fame</a>은 기여자들의 코드 줄 수 요약을 제공한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ git-fame
+
+Total commits: <span style="color:#ae81ff">5190</span>
+Total ctimes: <span style="color:#ae81ff">17640</span>
+Total files: <span style="color:#ae81ff">1058</span>
+Total loc: <span style="color:#ae81ff">113683</span>
+| Author                   |   loc |   coms |   fils |  distribution   |
+|:-------------------------|------:|-------:|-------:|:----------------|
+| Stanley Goldman          | <span style="color:#ae81ff">75955</span> |   <span style="color:#ae81ff">3164</span> |    <span style="color:#ae81ff">414</span> | 66.8/61.0/39.1  |
+| Andreia Gaita            | <span style="color:#ae81ff">34438</span> |   <span style="color:#ae81ff">1549</span> |    <span style="color:#ae81ff">477</span> | 30.3/29.8/45.1  |
+| Emil <span style="color:#e6db74">&#34;AngryAnt&#34;</span> Johansen |  <span style="color:#ae81ff">2230</span> |    <span style="color:#ae81ff">191</span> |     <span style="color:#ae81ff">35</span> | 2.0/ 3.7/ 3.3   |
+| Don Okuda                |   <span style="color:#ae81ff">312</span> |    <span style="color:#ae81ff">195</span> |     <span style="color:#ae81ff">51</span> | 0.3/ 3.8/ 4.8   |
+| Meaghan Lewis            |   <span style="color:#ae81ff">228</span> |     <span style="color:#ae81ff">15</span> |     <span style="color:#ae81ff">31</span> | 0.2/ 0.3/ 2.9   |
+</code></pre></div><p><!-- raw HTML omitted --></p>
+<p><a href="https://github.com/IonicaBizau/">@lonicaBizau</a>의 <a href="https://github.com/IonicaBizau/git-stats">git-stats</a>는 정렬 된 흥미로운 데이터들, 기여자들 그리고 파이차트가 포함되어 있다. 그의 다른 프로젝트와 같은 화려한 CLI 출력이다.</p>
+<p><img src="/posts/12/016.png" alt="git-stats"></p>
+<p>바라건대, 당신과 당신의 팀이 당신의 가치를 코드 줄 수와 커밋의 수로 측정하지 않아야 한다는 것이다. 혹시나 이 지표들이 당신의 복리후생에 영향을 끼친다면, 새로운 직업을 찾는게 좋은 것 이다.</p>
+<h1 id="10-모스-부호-워크아웃">10. 모스 부호 워크아웃</h1>
+<p>마지막으로, 운동을 하면서 모스 부호도 연습하는 방법을 꿈꿔 본 적 있는가? 더 이상 기다리지말자! <a href="https://github.com/veggiedefender">@veggiedefender</a>의 <a href="https://github.com/veggiedefender/open-and-shut">기발한 앱</a>은 지금까지 보지 못했던 <a href="https://github.com/veggiedefender/open-and-shut#features">기막힌 기능</a>들과 함께 노트북을 열고 닫고를 통해 모스부호를 만들 수 있다. 헬스비용을 계속 지불하면서 집에 갇혔을 때 아주 좋은 운동이 될 것이다. <a href="https://morsify.net/">.-.. — .-..</a></p>
+<p><img src="/posts/12/017.gif" alt="morse"></p>
+<hr>
+<ul>
+<li>2020-04-24 게시</li>
+<li>2020-04-23 초안작성</li>
+</ul>
+
+            </div>
+
+        </article>
+        <div id="comments" class="comments">
+            
+            <script type="text/javascript">
+                var disqus_identifier = "\/posts\/12\/"
+            </script>
+            
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "bdevflow" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <section class="container">
+        <p>blog/devflow</p>
+    </section>
+
+</footer>
+
+
+<script data-ad-client="ca-pub-8789708352088811" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></div>
+        
+        
+        <script type="text/javascript" src="/bundle.min.3d2cce203713785cf23c6b348fc5bb23bc90be30cb2177ff32e14835a3771864d3ba9a716bf53f6771ff1201a1579d6c4ddd45ef21c6fc4ce9519ceaa5ff00ee.js" integrity="sha512-PSzOIDcTeFzyPGs0j8W7I7yQvjDLIXf/MuFINaN3GGTTuppxa/U/Z3H/EgGhV51sTd1F7yHG/EzpUZzqpf8A7g=="></script>
+    </body>
+</html>
