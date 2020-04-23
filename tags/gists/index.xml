@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gists on devflow</title>
+    <link>https://devflow.github.io/tags/gists/</link>
+    <description>Recent content in Gists on devflow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 18 Apr 2020 21:08:14 +0900</lastBuildDate>
+    
+	<atom:link href="https://devflow.github.io/tags/gists/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Github 프로팁 #1</title>
+      <link>https://devflow.github.io/posts/10/</link>
+      <pubDate>Sat, 18 Apr 2020 21:08:14 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/10/</guid>
+      <description>이 게시물은 &amp;lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Jason Etcovitch&amp;rsquo;을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&amp;hellip; 모호한 내용은 원본 게시물을 참고바람. 😉
+ Github Action와 Probot 이 내용은 팁보다는 더 복잡한 이야기 이긴한데 자동화 도구를 사용하보면 분명 마음에 들것이다. Github Actions과 Probot은 별도의 프로젝트로 개발자가 보일러플레이트(인증 및 웹훅 이벤트 핸들링과 같은)를 고려하지않게 추상화를 제공하여 Github에서 기능 확장을 할 수 있도록하는 목표를 가지고 있다. 관심이 생긴다면 Github 엔지니어인 Jason Etcovitch의 블로그를 살펴보자.</description>
+    </item>
+    
+  </channel>
+</rss>

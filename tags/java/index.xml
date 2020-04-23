@@ -26,7 +26,7 @@
       
       <guid>https://devflow.github.io/posts/1/</guid>
       <description>그래서 이게 뭐냐? 음 좀 살펴보고&amp;hellip; hello();
-H3 ~ H4 😄 H5 🐒 Proxy.prototype.close = function () { var self = this; this.httpServer.close(); delete this.httpServer; if (this.httpsServer) { this.httpsServer.close(); delete this.httpsServer; delete this.wssServer; delete this.sslServers; } if (this.sslServers) { (Object.keys(this.sslServers)).forEach(function (srvName) { var server = self.sslServers[srvName].server; if (server) server.close(); delete self.sslServers[srvName]; }); } return this; }; 첫 글은 이따구로 생겨야 제맛이지.. while (d &amp;lt; end) { while (d &amp;lt; end &amp;amp;&amp;amp; (*d == &amp;#39; &amp;#39; || *d == &amp;#39;\n&amp;#39; || *d == &amp;#39;\r&amp;#39;)) ++d; const char *start = d; while (d &amp;lt; end &amp;amp;&amp;amp; *d !</description>
+H3 ~ H4 😄 H5 🐒  Proxy.prototype.close = function () { var self = this; this.httpServer.close(); delete this.httpServer; if (this.httpsServer) { this.httpsServer.close(); delete this.httpsServer; delete this.wssServer; delete this.sslServers; } if (this.sslServers) { (Object.keys(this.sslServers)).forEach(function (srvName) { var server = self.sslServers[srvName].server; if (server) server.close(); delete self.sslServers[srvName]; }); } return this; }; 첫 글은 이따구로 생겨야 제맛이지.. while (d &amp;lt; end) { while (d &amp;lt; end &amp;amp;&amp;amp; (*d == &amp;#39; &amp;#39; || *d == &amp;#39;\n&amp;#39; || *d == &amp;#39;\r&amp;#39;)) ++d; const char *start = d; while (d &amp;lt; end &amp;amp;&amp;amp; *d !</description>
     </item>
     
   </channel>

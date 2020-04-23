@@ -45,7 +45,7 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
 
 
 
-<link rel="stylesheet" href="/style.min.7f142184667242ee2c9eb807d76515fdfaad1c71c28739c6c54d0f1ae6874a7c.css"></head>
+<link rel="stylesheet" href="/style.min.b281752128e443b270c8a728a34966189e6c5df6beab5524cf2d6d25d385869c.css"></head>
     <body>
         <div class="body"><nav class="nav-bar">
     <div class="container">
@@ -79,7 +79,7 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
 <div class="container">
     <div class="post">
         <article>
-            <p class="post-tags"><span class="tag"><a href="https://devflow.github.io/tags/i3wm">i3wm</a></span><span class="tag"><a href="https://devflow.github.io/tags/linux">Linux</a></span><span class="tag"><a href="https://devflow.github.io/tags/twm">TWM</a></span>
+            <p class="post-tags clearfix"><span class="tag"><a href="https://devflow.github.io/tags/i3wm">i3wm</a></span><span class="tag"><a href="https://devflow.github.io/tags/linux">Linux</a></span><span class="tag"><a href="https://devflow.github.io/tags/twm">TWM</a></span>
             </p>
 
             <div class="post-info">
@@ -92,7 +92,11 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
 
 
             <div class="post-content">
-                <p><img src="/posts/6/myi3.png" alt="my-i3"></p>
+                <p><p class="md__image">
+    <a href="/posts/6/myi3.png" target="_blank">
+        <img src="/posts/6/myi3.png" alt="my-i3"  />
+    </a>
+</p></p>
 <pre><code>i3에 대해서 기존 DE(Desktop Environment) 사용자의 시선에서 알아보도록하자.
 </code></pre>
 <h2 id="i3">i3?</h2>
@@ -130,14 +134,26 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
 <h2 id="빨리-설치해보자">빨리 설치해보자</h2>
 <p>각 배포판 저장소에서 i3를 설치하자. 일부 DE를 설치한 사람은 새션을 로그아웃 후 DM 로그인 시 <code>i3</code>를 선택 후 로그인해주면 된다.</p>
 <p>DE를 사용중이지 않거나, Arch Linux와 같이 깔끔한 상태에서 설치했다면 컴퓨터 환경에 맞는 드라이버나 lib들을 설치한 후 Xorg와 i3를 설치해주면 된다. 물론 추가적인 설정을 해줘한다. (폰트, DM, 기타 유용한 어플리케이션들&hellip;)</p>
-<p><a href="https://i3wm.org/downloads/">배포판별 다운로드</a></p>
+<p><a href="https://i3wm.org/downloads/" target="_blank">배포판별 다운로드</a></p>
 <h2 id="사용해보자">사용해보자</h2>
 <p>설치 후 정상적으로 실행했으면 아마 검은배경과 이상한 구시대적 상태바가 보이면서 설정할 수 있는 터미널 창이 하나 뜰텐데, 바로 <code>$mod</code>키의 설정이다. <code>Win</code>키를 사용할 것인지, <code>Alt</code>키를 사용할 것인지 자신의 키보드나 편의에 맞게 할당해주자.</p>
-<p><img src="/posts/6/firstconnfig.png" alt="first-config"></p>
+<p><p class="md__image">
+    <a href="/posts/6/firstconnfig.png" target="_blank">
+        <img src="/posts/6/firstconnfig.png" alt="first-config"  />
+    </a>
+</p></p>
 <p>이후에는 당황 하지말고 우선 아래와 같은 키 바인딩을 살펴보자</p>
-<p><img src="/posts/6/keyboard-layer1.png" alt="layout1"></p>
+<p><p class="md__image">
+    <a href="/posts/6/keyboard-layer1.png" target="_blank">
+        <img src="/posts/6/keyboard-layer1.png" alt="layout1"  />
+    </a>
+</p></p>
 <p><code>$mod</code>의 기본 레이아웃.</p>
-<p><img src="/posts/6/keyboard-layer2.png" alt="layout2"></p>
+<p><p class="md__image">
+    <a href="/posts/6/keyboard-layer2.png" target="_blank">
+        <img src="/posts/6/keyboard-layer2.png" alt="layout2"  />
+    </a>
+</p></p>
 <p><code>$mod + Shift</code>의 레이아웃</p>
 <p>간단히 키바인딩을 나열해보자면&hellip;</p>
 <ul>
@@ -154,15 +170,15 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
 <p>감이 좀 잡히는가? 하나하나 눌러보면서 이 키들이 어떠한 역할로 작동하는지를 살펴보면 좋을 것이다. 물론 감이 안잡혀도 상관이 없다. 왜냐면 우리는 마음대로 키바인딩을 설정해줄 수 있으니까.</p>
 <h2 id="deep-dive">Deep Dive</h2>
 <p>이 문서는 무료로 해줍니다.</p>
-<p><a href="https://i3wm.org/docs/">i3 Documents</a> &lt;&ndash; 헛소리 없음</p>
+<p><a href="https://i3wm.org/docs/" target="_blank">i3 Documents</a> &lt;&ndash; 헛소리 없음</p>
 <h2 id="그래서">그래서&hellip;</h2>
 <p>나도 뉴비다 뉴비. i3를 사용한지는 글작성하는 시기쯤엔 3개월 쯤 됐는데&hellip; 이렇게만 사용해봐도 충분히 다른 사람들에게 적극적으로 추천할만 하다. 확실히 적응하기 까지의 러닝-커브는 존재하긴 한다. 하지만 어느정도 사용할 수 있게 된다면 앞선 투자비용에 대비 생산률은 대폭 상승했다.</p>
 <h2 id="내-환경">내 환경</h2>
 <p>시간이 생긴다면 <code>dotfiles</code>를 정리해서 올릴 생각이다. 기본적으로 대체 가능 어플리케이션들은 아래와 같다.</p>
 <ul>
-<li>dmenu =&gt; <code>rofi</code> <a href="https://github.com/davatorium/rofi">https://github.com/davatorium/rofi</a></li>
-<li>i3bar =&gt; <code>polybar</code> <a href="https://github.com/polybar/polybar">https://github.com/polybar/polybar</a></li>
-<li>polybar theme  <a href="https://github.com/adi1090x/polybar-themes">https://github.com/adi1090x/polybar-themes</a></li>
+<li>dmenu =&gt; <code>rofi</code> <a href="https://github.com/davatorium/rofi" target="_blank">https://github.com/davatorium/rofi</a></li>
+<li>i3bar =&gt; <code>polybar</code> <a href="https://github.com/polybar/polybar" target="_blank">https://github.com/polybar/polybar</a></li>
+<li>polybar theme  <a href="https://github.com/adi1090x/polybar-themes" target="_blank">https://github.com/adi1090x/polybar-themes</a></li>
 </ul>
 
             </div>
@@ -205,7 +221,11 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
 
 </footer>
 
-
+<script>
+    $(function(){
+        alert("hh");
+    })
+</script>
 <script data-ad-client="ca-pub-8789708352088811" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></div>
         
         

@@ -49,7 +49,7 @@
 
 
 
-<link rel="stylesheet" href="/style.min.7f142184667242ee2c9eb807d76515fdfaad1c71c28739c6c54d0f1ae6874a7c.css"></head>
+<link rel="stylesheet" href="/style.min.b281752128e443b270c8a728a34966189e6c5df6beab5524cf2d6d25d385869c.css"></head>
     <body>
         <div class="body"><nav class="nav-bar">
     <div class="container">
@@ -83,7 +83,7 @@
 <div class="container">
     <div class="post">
         <article>
-            <p class="post-tags"><span class="tag"><a href="https://devflow.github.io/tags/opencv">OpenCV</a></span><span class="tag"><a href="https://devflow.github.io/tags/objectdetection">ObjectDetection</a></span><span class="tag"><a href="https://devflow.github.io/tags/android">Android</a></span>
+            <p class="post-tags clearfix"><span class="tag"><a href="https://devflow.github.io/tags/opencv">OpenCV</a></span><span class="tag"><a href="https://devflow.github.io/tags/objectdetection">ObjectDetection</a></span><span class="tag"><a href="https://devflow.github.io/tags/android">Android</a></span>
             </p>
 
             <div class="post-info">
@@ -102,9 +102,9 @@
 <li>Android 10</li>
 </ul>
 <p>내가 검출하고자 하는 데이터는 실제(Real Object)가 아니고 안드로이드의 Display에서 특정 UI 컴포넌트를 검출하는 작업이 필요했다.</p>
-<p>먼저 시도한 방법은 OpenCV의 <a href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html">TemplateMatching</a>.</p>
-<p>하지만 여러 디바이스 환경에서의 UI 컴포넌트의 사이즈와 변형(반응형 디자인)으로 인해 TemplateMatching의 특성상 검출하려는 오브젝트의 크기가 검출 대상 소스에서의 크기는 같아야 하고 Multi-scaling의 방식이나 <a href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/pyramids/pyramids.html">MatPyramid</a> 등 다양한 scale-case 를 반영해도 변형된 데이터에서는 검출이 힘들었다.</p>
-<p>그래서 시도해본 것은 <a href="https://docs.opencv.org/master/df/dd2/tutorial_py_surf_intro.html">SURF</a>, <a href="https://docs.opencv.org/3.4/da/df5/tutorial_py_sift_intro.html">SIFT</a> 그리고 <a href="https://docs.opencv.org/3.4/d1/d89/tutorial_py_orb.html">ORB</a>.</p>
+<p>먼저 시도한 방법은 OpenCV의 <a href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html" target="_blank">TemplateMatching</a>.</p>
+<p>하지만 여러 디바이스 환경에서의 UI 컴포넌트의 사이즈와 변형(반응형 디자인)으로 인해 TemplateMatching의 특성상 검출하려는 오브젝트의 크기가 검출 대상 소스에서의 크기는 같아야 하고 Multi-scaling의 방식이나 <a href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/pyramids/pyramids.html" target="_blank">MatPyramid</a> 등 다양한 scale-case 를 반영해도 변형된 데이터에서는 검출이 힘들었다.</p>
+<p>그래서 시도해본 것은 <a href="https://docs.opencv.org/master/df/dd2/tutorial_py_surf_intro.html" target="_blank">SURF</a>, <a href="https://docs.opencv.org/3.4/da/df5/tutorial_py_sift_intro.html" target="_blank">SIFT</a> 그리고 <a href="https://docs.opencv.org/3.4/d1/d89/tutorial_py_orb.html" target="_blank">ORB</a>.</p>
 <p>그 중에서 내가 검출하려는 대상에서 최고의 성능과 결과를 보여준 SIFT.</p>
 <p>하지만, Find-Object에서 시행한 결과와 JAVA(Kotiln)로 작성한 결과가 매우 상이하며 정확도가 현저히 떨어졌다. 그래서 Find-Object의 소스코드를 참고하여 어떤 방식으로 오브젝트를 검출하는지 알아보기로 했다.</p>
 <h2 id="findhomography의-mask를-통한-inlier와-outlier-구분">findHomography의 Mask를 통한 inlier와 outlier 구분</h2>
@@ -117,7 +117,7 @@
 </code></pre></div><p>findHomography에 mask를 이용해여 inlier을 구분하는 예.</p>
 <p>반대로 outlier는 위 조건에 부합하지 않는 데이터이다. 주의해야할 것은 inlier, outlier의 데이터를 추출하고자 하면 DescriptorMatcher에서 계산된 매칭 데이터에 접근하여 데이터를 추출하도록 해야 한다.</p>
 <p>하지만 부족하다&hellip; inlier의 최솟값을 지정해도 이는 약간의 데이터 변경만으로도 허용범위를 벗어나 버린다.</p>
-<h2 id="inverted-search-find-object-wikihttpsgithubcomintrolabfind-objectwikiinvertedsearch">Inverted Search (<a href="https://github.com/introlab/find-object/wiki/InvertedSearch">Find-Object WIKI</a>)</h2>
+<h2 id="inverted-search-find-object-wikihttpsgithubcomintrolabfind-objectwikiinvertedsearch">Inverted Search (<a href="https://github.com/introlab/find-object/wiki/InvertedSearch" target="_blank">Find-Object WIKI</a>)</h2>
 <p>Inverted Search 즉, Object를 Scene에 비교하는 것이 아니고, Scene에 Object를 비교하는 방식이다.
 정확하게 어떠한 알고리즘으로 작동하는지는 상단 링크를 통해 살펴보고 코드도 리뷰해보길 바란다&hellip;</p>
 <p>검출할 Object들을 모두 미리 detect 해서 추출된 descriptors를 나열해 놓은 곳에 Scene을 비교하는 것.</p>
@@ -177,7 +177,11 @@ descriptors and we match scene&rsquo;s descriptors to this vocabulary. It is the
 
 </footer>
 
-
+<script>
+    $(function(){
+        alert("hh");
+    })
+</script>
 <script data-ad-client="ca-pub-8789708352088811" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></div>
         
         

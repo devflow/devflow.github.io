@@ -18,8 +18,8 @@
       <guid>https://devflow.github.io/posts/12/</guid>
       <description>이 게시물은 &amp;lsquo;GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly&amp;rsquo;을 번역/정리한 게시물이다. 번역 전문가도 아니고 많은 의역/직역있으니&amp;hellip; 모호한 내용은 원본 게시물을 참고바람. 😉
  1. Fuzzy file finder 어느 저장소에서든 파일을 검색하기 원한다면 t 키를 누른 후 타이핑하면 된다.
-2. 편하게 파일과 디렉토리 탐색하기 Octotree는 트리형태로 손쉽게 파일과 디렉토리를 탐색할 수 있는 브라우저 확장프로그램이다.
-보너스 포인트: Github Enterprise에서도 작동한다.
+ 2. 편하게 파일과 디렉토리 탐색하기 Octotree는 트리형태로 손쉽게 파일과 디렉토리를 탐색할 수 있는 브라우저 확장프로그램이다.
+ 보너스 포인트: Github Enterprise에서도 작동한다.
 재밌는 사실: 몇 년 전 Github Enterprise를 지원하려는 개발자에게 연락했는데, 만약 당신이 Github를 위한 브라우저 확장프로그램을 구축하고 있고 Github Enterprise도 지원 할 예정이라면, Github Developer Program에 참가해서 개발자 라이센스를 받을 수 있다.</description>
     </item>
     
@@ -132,7 +132,7 @@ Tiling window manager? 흔하게 접할 수 있는 TWM에는 윈도우즈(Window
       
       <guid>https://devflow.github.io/posts/1/</guid>
       <description>그래서 이게 뭐냐? 음 좀 살펴보고&amp;hellip; hello();
-H3 ~ H4 😄 H5 🐒 Proxy.prototype.close = function () { var self = this; this.httpServer.close(); delete this.httpServer; if (this.httpsServer) { this.httpsServer.close(); delete this.httpsServer; delete this.wssServer; delete this.sslServers; } if (this.sslServers) { (Object.keys(this.sslServers)).forEach(function (srvName) { var server = self.sslServers[srvName].server; if (server) server.close(); delete self.sslServers[srvName]; }); } return this; }; 첫 글은 이따구로 생겨야 제맛이지.. while (d &amp;lt; end) { while (d &amp;lt; end &amp;amp;&amp;amp; (*d == &amp;#39; &amp;#39; || *d == &amp;#39;\n&amp;#39; || *d == &amp;#39;\r&amp;#39;)) ++d; const char *start = d; while (d &amp;lt; end &amp;amp;&amp;amp; *d !</description>
+H3 ~ H4 😄 H5 🐒  Proxy.prototype.close = function () { var self = this; this.httpServer.close(); delete this.httpServer; if (this.httpsServer) { this.httpsServer.close(); delete this.httpsServer; delete this.wssServer; delete this.sslServers; } if (this.sslServers) { (Object.keys(this.sslServers)).forEach(function (srvName) { var server = self.sslServers[srvName].server; if (server) server.close(); delete self.sslServers[srvName]; }); } return this; }; 첫 글은 이따구로 생겨야 제맛이지.. while (d &amp;lt; end) { while (d &amp;lt; end &amp;amp;&amp;amp; (*d == &amp;#39; &amp;#39; || *d == &amp;#39;\n&amp;#39; || *d == &amp;#39;\r&amp;#39;)) ++d; const char *start = d; while (d &amp;lt; end &amp;amp;&amp;amp; *d !</description>
     </item>
     
   </channel>

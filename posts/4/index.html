@@ -49,7 +49,7 @@
 
 
 
-<link rel="stylesheet" href="/style.min.7f142184667242ee2c9eb807d76515fdfaad1c71c28739c6c54d0f1ae6874a7c.css"></head>
+<link rel="stylesheet" href="/style.min.b281752128e443b270c8a728a34966189e6c5df6beab5524cf2d6d25d385869c.css"></head>
     <body>
         <div class="body"><nav class="nav-bar">
     <div class="container">
@@ -83,7 +83,7 @@
 <div class="container">
     <div class="post">
         <article>
-            <p class="post-tags"><span class="tag"><a href="https://devflow.github.io/tags/android">Android</a></span><span class="tag"><a href="https://devflow.github.io/tags/mediaprojection">MediaProjection</a></span><span class="tag"><a href="https://devflow.github.io/tags/imagereader">ImageReader</a></span>
+            <p class="post-tags clearfix"><span class="tag"><a href="https://devflow.github.io/tags/android">Android</a></span><span class="tag"><a href="https://devflow.github.io/tags/mediaprojection">MediaProjection</a></span><span class="tag"><a href="https://devflow.github.io/tags/imagereader">ImageReader</a></span>
             </p>
 
             <div class="post-info">
@@ -98,7 +98,7 @@
             <div class="post-content">
                 <p>우선 5.0(API 21) 이상에서는 대부분~ 잘되는데 특정 환경(대부분 예뮬레이터들)에서 <code>MediaProjection</code>을 <code>ImageReader</code>로 통해서 <code>Surface</code>를 읽으면 아무 데이터가 없거나 NULL일 수 있다.</p>
 <p>이는 네이티브, 예뮬 등 일부 환경에서 (물론 5.0도 이상일 수 있다!) openGLES 호환(<code>EGL_RECORDABLE_ANDROID</code> 값이 없는 등.. )이 좋지 않아서 발생하는 문제이다.</p>
-<p>결론은 대상 문제가 발생하는 기기에서는 별도의 방법으로 처리해야 한다는 것&hellip; 일단 구글의 비공식 테스트 앱 (<a href="https://github.com/google/grafika">grafika</a>)를 살펴보고 구현하면 된다.</p>
+<p>결론은 대상 문제가 발생하는 기기에서는 별도의 방법으로 처리해야 한다는 것&hellip; 일단 구글의 비공식 테스트 앱 (<a href="https://github.com/google/grafika" target="_blank">grafika</a>)를 살펴보고 구현하면 된다.</p>
 <p>우선 grafika의 <code>gles</code>를 모드 임포트 해준다.</p>
 <ol>
 <li><code>VirtualDisplay</code>가 사용할 수 있는 <code>Surface</code>를 만들어 준다.</li>
@@ -131,7 +131,7 @@ virtualDisplay = mProjection<span style="color:#f92672">!!</span>.createVirtualD
 )
 </code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <ol start="2">
-<li>SurfaceTexture의 <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.OnFrameAvailableListener">OnFrameAvailableListener</a></li>
+<li>SurfaceTexture의 <a href="https://developer.android.com/reference/android/graphics/SurfaceTexture.OnFrameAvailableListener" target="_blank">OnFrameAvailableListener</a></li>
 </ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">eglFrameRate++
 
@@ -213,7 +213,11 @@ eglCurrentBitmap<span style="color:#f92672">?.</span>copyPixelsFromBuffer(eglBuf
 
 </footer>
 
-
+<script>
+    $(function(){
+        alert("hh");
+    })
+</script>
 <script data-ad-client="ca-pub-8789708352088811" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></div>
         
         
