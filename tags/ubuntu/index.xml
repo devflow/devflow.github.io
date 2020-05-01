@@ -5,10 +5,20 @@
     <link>https://devflow.github.io/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on devflow</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 17 Apr 2020 22:26:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 22:11:29 +0900</lastBuildDate>
     
 	<atom:link href="https://devflow.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pop!_OS 20.04 LTS Mirror 다운로드</title>
+      <link>https://devflow.github.io/posts/14/</link>
+      <pubDate>Fri, 01 May 2020 22:11:29 +0900</pubDate>
+      
+      <guid>https://devflow.github.io/posts/14/</guid>
+      <description>Pop!_OS 20.04가 드디어 릴리즈 되었습니다. 다양한 기능이 추가되었네요. 무엇보다 윈도우 타일링이 기대 됩니다. 이번에도 다운로드하는데 애를 먹었다&amp;hellip; 그러기에 다른 사람들은 시간을 아꼈으면 하기에 구글 드라이브로 공유해요.
+20.04 릴리즈 노트 단축키 변경    행동 이전 변경     화면 잠금 Meta + L Meta + ESC   워크스페이스 이동(상/하) Meta + UP / DOWN Meta + Ctrl + UP / DOWN   창 닫기 Meta + W Meta + Q   최대화 토글 Meta + UP Meta + M    새 기능들 Pop Shell 자동 윈도우 타일링 20.</description>
+    </item>
     
     <item>
       <title>Pop!_OS 19.10 AMD/INTEL Mirror 다운로드</title>
